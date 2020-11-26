@@ -76,23 +76,22 @@
                 var self = this;
                 setInterval(function() {
                     axios.get('/live-match')
-                        .then((response)=>{
+                    .then((response)=>{
                         self.liveMatches = response.data
-                        console.log(response.data);
-                        })
+                    })
                 }, 15000);
             },
-            getLiveMatch(){
+            getLiveMatch() {
                 axios.get('/live-match')
-                     .then((response)=>{
-                       this.liveMatches = response.data
-                     })
+                .then((response)=>{
+                    this.liveMatches = response.data
+                });
             },
-            getUpcommingMatch(){
+            getUpcommingMatch() {
                 axios.get('/upcomming-match')
-                     .then((response)=>{
-                       this.upcommingMatches = response.data
-                     })
+                .then((response)=>{
+                    this.upcommingMatches = response.data
+                });
             }
         },
 

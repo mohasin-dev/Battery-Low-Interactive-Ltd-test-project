@@ -1774,7 +1774,6 @@ __webpack_require__.r(__webpack_exports__);
       setInterval(function () {
         axios.get('/live-match').then(function (response) {
           self.liveMatches = response.data;
-          console.log(response.data);
         });
       }, 15000);
     },
